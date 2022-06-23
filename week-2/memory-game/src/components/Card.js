@@ -2,37 +2,45 @@ import React from "react";
 import ReactCardFlip from "react-card-flip";
 function Card(props) {
     const flipCard = e => {
-        if(props.found || props.flipped) return;
+        console.log(e.target.id);
+        if (props.found || props.flipped) return;
         props.flip(e.target.id);
     }
+    const CardStyleFront = {
+        border: "1px solid black",
+        padding: "5px",
+        backgroundColor: 'lightblue',
+        margin: "5px",
+        width: "100%",
+        height: "100%",
+    };
+    // console.log(props);
+    const CardStyleBack = {
+        backgroundColor: props.found ? 'green' : 'gray',
+        backgroundImage: `url(${props.imageUrl})`,
+        backgroundSize: 'contain',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+
+        cursor: props.found ? '' : 'pointer',
+        border: "1px solid black",
+        padding: "5px",
+        margin: "5px",
+        width: "100%",
+        height: "100%"
+    };
     return (
-        <div style={{ minHeight: '20%', height: 'auto',width:'100%'}}>
-        <ReactCardFlip isFlipped={props.flipped} flipDirection="horizontal" containerStyle={{
-            minHeight: '100%',
-            width: '100%',
-            }}
-            cardStyles={{
-                front: {
-                    backgroundColor: 'lightblue',
-                    width: '100%',
-                    minHeight: '100%'
-                },
-                back: {
-                    backgroundImage: `${props.imageUrl}`,
-                    backgroundSize: 'contain',
-                    backgroundRepeat: 'no-repeat',
-                    backgroundPosition: 'center',
-                    backgroundColor: props.found ? 'green': 'gray',
-                    cursor: props.found ? '': 'pointer', 
-                    width: '100%',
-                    minHeight: '100%'
-                }
+        <div style={{ minHeight: '22%', height: 'auto', flex: 1, display: 'flex', flexDirection: 'column', alignItems: 'stretch' }}>
+            <ReactCardFlip isFlipped={props.flipped} flipDirection="horizontal" containerStyle={{
+                width: '100%',
+                height: '100%'
             }}>
-            <div id={props.id} className="card front"
-            onClick={flipCard}
-            key="front" />
-            <div className="card back" onClick={flipCard} key="back"></div>
-        </ReactCardFlip>
+                <div id={props.id} className="CardFront"
+                    onClick={flipCard}
+                    style={CardStyleFront}
+                    key="front" ></div>
+                <div className="CardBack" onClick={flipCard} style={CardStyleBack} key="back"></div>
+            </ReactCardFlip>
         </div>
     );
 }

@@ -15,12 +15,15 @@ function App() {
   const getImageUrl = (randomNumber) => {
     return `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${randomNumber}.png`;
   }
+  const uid = function(){
+    return Date.now().toString(36) + Math.random().toString(36).substr(2);
+  }
   const shuffleCards = (cards) => {
     var len = cards.length;
     let currentIndex = cards.length,  randomIndex;
 
     // While there remain elements to shuffle.
-    while (currentIndex != 0) {
+    while (currentIndex !== 0) {
 
       // Pick a remaining element.
       randomIndex = Math.floor(Math.random() * currentIndex);
@@ -37,8 +40,8 @@ function App() {
     var cards = []
     for(let i = 0;i<noOfDifferentImages;i++)
     {
-      var id1 = Math.floor(Math.random() * 1000) + 1;
-      var id2 = Math.floor(Math.random() * 1000) + 1;
+      var id1 = uid();
+      var id2 = uid();
       var imageId = Math.floor(Math.random() * 300) + 1;
       const card1 = {
         id: id1,
