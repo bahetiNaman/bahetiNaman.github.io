@@ -6,9 +6,12 @@ function GameBoard(props) {
     const [cards, setCards] = useState(props.cards);
     useEffect(() => {
         setCards(props.cards);
-    }, []);
+    }, [props.cards]);
     useEffect(() => {
         isMatch();
+        if (cards.every(card => card.found)) {
+            props.won();
+        }
     }, [cards])
     const flipCard = id => {
         const newCards = cards.map(card => {
@@ -54,9 +57,6 @@ function GameBoard(props) {
                     }
                 });
                 setCards(newCards);
-                if (cards.every(card => card.found)) {
-                    props.won();
-                }
             }
             else {
                 setTimeout(() => {

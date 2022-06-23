@@ -38,6 +38,7 @@ function App() {
   const generateBoard = () => {
     let noOfDifferentImages = 12;
     var cards = []
+    setCards([]);
     for(let i = 0;i<noOfDifferentImages;i++)
     {
       var id1 = uid();
@@ -65,12 +66,19 @@ function App() {
     console.log(cards);
   }
   const hasWon = () => {
+    console.log("Yeah won");
     setWon(true);
   }
+  const restartGame = () => {
+      setDataLoaded(false);
+      setCards([]);
+      setWon(false);
+      setClick(0);
+      startGame();
+  }
   const startGame = () => {
-    generateBoard();
     document.getElementsByClassName("startButton")[0].setAttribute('style', "visibility: hidden");
-    setWon(false);
+    generateBoard();
     setDataLoaded(true);
   }
   return (
@@ -94,7 +102,7 @@ function App() {
       <button onClick={startGame} className="startButton">
         Start Game
       </button>
-      {won && <button className="restartButon" onClick={startGame}>Restart</button>}
+      {won && <button className="restartButon" onClick={restartGame}>Restart</button>}
     </div>    
   </div>
   );
