@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/memory-game/static/css/main.073c9b0a.css",
-    "main.js": "/memory-game/static/js/main.759d8c53.js",
-    "static/js/787.69b12325.chunk.js": "/memory-game/static/js/787.69b12325.chunk.js",
-    "index.html": "/memory-game/index.html",
-    "main.073c9b0a.css.map": "/memory-game/static/css/main.073c9b0a.css.map",
-    "main.759d8c53.js.map": "/memory-game/static/js/main.759d8c53.js.map",
-    "787.69b12325.chunk.js.map": "/memory-game/static/js/787.69b12325.chunk.js.map"
+    "main.css": "/week-2/memory-game/static/css/main.073c9b0a.css",
+    "main.js": "/week-2/memory-game/static/js/main.5b836291.js",
+    "static/js/787.69b12325.chunk.js": "/week-2/memory-game/static/js/787.69b12325.chunk.js",
+    "index.html": "/week-2/memory-game/index.html",
+    "main.073c9b0a.css.map": "/week-2/memory-game/static/css/main.073c9b0a.css.map",
+    "main.5b836291.js.map": "/week-2/memory-game/static/js/main.5b836291.js.map",
+    "787.69b12325.chunk.js.map": "/week-2/memory-game/static/js/787.69b12325.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.759d8c53.js"
+    "static/js/main.5b836291.js"
   ]
 }
