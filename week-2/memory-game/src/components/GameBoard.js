@@ -13,6 +13,14 @@ function GameBoard(props) {
             props.won();
         }
     }, [cards])
+    useEffect(() => {
+        setTimeout(() => {
+            const newCards = cards.map(card => {
+                return {...card, flipped: false};
+            })
+            setCards(newCards);
+        }, 2000);
+    }, []);
     const flipCard = id => {
         const newCards = cards.map(card => {
             if (card.id == id) {
@@ -21,7 +29,6 @@ function GameBoard(props) {
             return card;
         })
         setCards(newCards);
-
     }
     const handleFlip = id => {
         console.log(id);

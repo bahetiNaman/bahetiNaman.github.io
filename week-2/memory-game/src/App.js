@@ -54,14 +54,14 @@ function App() {
         id: id1,
         matchesId: id2, 
         url: getImageUrl(imageId),
-        flipped: false,
+        flipped: true,
         found: false
       }
       const card2 = {
         id: id2,
         matchesId: id1, 
         url: getImageUrl(imageId),
-        flipped: false,
+        flipped: true,
         found: false
       }
       cards.push(card1);
