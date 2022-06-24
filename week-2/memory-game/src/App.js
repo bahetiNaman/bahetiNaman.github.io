@@ -39,11 +39,17 @@ function App() {
     let noOfDifferentImages = 12;
     var cards = []
     setCards([]);
+    var ids = new Set();
     for(let i = 0;i<noOfDifferentImages;i++)
     {
       var id1 = uid();
       var id2 = uid();
       var imageId = Math.floor(Math.random() * 300) + 1;
+      while(ids.has(imageId))
+      {
+        imageId = Math.floor(Math.random() * 300) + 1;
+      }
+      ids.add(imageId);
       const card1 = {
         id: id1,
         matchesId: id2, 
