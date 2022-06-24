@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "//bahetinaman.github.io/memory-game/static/css/main.073c9b0a.css",
+    "main.js": "//bahetinaman.github.io/memory-game/static/js/main.8ccdb867.js",
+    "static/js/787.69b12325.chunk.js": "//bahetinaman.github.io/memory-game/static/js/787.69b12325.chunk.js",
+    "index.html": "//bahetinaman.github.io/memory-game/index.html",
+    "main.073c9b0a.css.map": "//bahetinaman.github.io/memory-game/static/css/main.073c9b0a.css.map",
+    "main.8ccdb867.js.map": "//bahetinaman.github.io/memory-game/static/js/main.8ccdb867.js.map",
+    "787.69b12325.chunk.js.map": "//bahetinaman.github.io/memory-game/static/js/787.69b12325.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.8ccdb867.js"
+  ]
+}
