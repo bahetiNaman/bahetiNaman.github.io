@@ -56,8 +56,3 @@
     margin-top: 0.625rem;
     font-weight: lighter;
 }
-
-.videoDescription:hover {
-  overflow: visible;
-  z-index: 9;
-}
