@@ -42,8 +42,6 @@
   color: var(--foreground);
   border: none;
   padding-left: 10px;
-  padding-top: 0;
-  padding-bottom: 0;
   outline: none;
 }
 
