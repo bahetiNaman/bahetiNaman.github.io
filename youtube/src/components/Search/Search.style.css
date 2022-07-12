@@ -1,8 +1,0 @@
-.searchPageDiv {
-    flex: 0.9;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    overflow-y: scroll;
-}
